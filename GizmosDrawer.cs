@@ -38,14 +38,6 @@ namespace Cephei.DebugPack
 
 		private static GizmosDrawer _instance;
 
-        private void Awake()
-		{
-			if (Instance != null)
-				Debug.LogError("Gizmos drawer was instanced");
-
-			Instance = this;
-		}
-
 		public static void AddAction(Action action, float timeAlive)
 		{
 			ActionGizmos actionGizmos = new ActionGizmos(Time.time, timeAlive, action);
